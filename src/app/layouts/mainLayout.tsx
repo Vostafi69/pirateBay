@@ -11,9 +11,9 @@ export const MainLayout: FC<MainLayoutProps> = ({
   headerSlot,
 }) => {
   return (
-    <div className="h-screen w-full">
+    <div className="flex h-screen w-full max-w-[1920px] flex-col px-10 py-8">
       {headerSlot}
-      <main>{children}</main>
+      <main className="h-full w-full">{children}</main>
       {footerSlot}
     </div>
   );
