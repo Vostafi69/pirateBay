@@ -53,6 +53,7 @@ export default {
       },
       fontFamily: {
         PirateOne: ["PirataOne"],
+        TTFirsNeu: ["TTFirsNeue"],
       },
     },
   },

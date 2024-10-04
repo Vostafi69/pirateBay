@@ -69,4 +69,22 @@
     font-style: normal;
     font-weight: 400;
   }
+  @font-face {
+    font-family: "TTFirsNeue";
+    src: url("/fonts/TTFirsNeue-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "TTFirsNeue";
+    src: url("/fonts/TTFirsNeue-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "TTFirsNeue";
+    src: url("/fonts/TTFirsNeue-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+  }
 }
