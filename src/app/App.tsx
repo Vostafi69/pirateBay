@@ -1,9 +1,10 @@
 import { MainPage } from "@/pages";
 import { MainLayout } from "./layouts/mainLayout";
+import { Header } from "@/widgets";
 
 function App() {
   return (
-    <MainLayout>
+    <MainLayout headerSlot={<Header />}>
       <MainPage />
     </MainLayout>
   );
