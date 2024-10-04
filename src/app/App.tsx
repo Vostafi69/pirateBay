@@ -1,10 +1,10 @@
 import { MainPage } from "@/pages";
 import { MainLayout } from "./layouts/mainLayout";
-import { Header } from "@/widgets";
+import { Footer, Header } from "@/widgets";
 
 function App() {
   return (
-    <MainLayout headerSlot={<Header />}>
+    <MainLayout headerSlot={<Header />} footerSlot={<Footer />}>
       <MainPage />
     </MainLayout>
   );
