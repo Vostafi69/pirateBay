@@ -11,8 +11,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/shared/ui/form";
-import { Button } from "@/shared/ui/button";
-import { Input } from "@/shared/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/shared/ui/select";
 
 export const SwapperForm: FC = () => {
   const form = useForm<z.infer<typeof swapperFormSchema>>({
@@ -29,16 +34,30 @@ export const SwapperForm: FC = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex h-full flex-col space-y-8"
+      >
         <FormField
           control={form.control}
           name="from"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>From</FormLabel>
-              <FormControl>
-                <Input placeholder="From" {...field} />
-              </FormControl>
+              <FormLabel className="text-[22px] font-bold leading-none">
+                From
+              </FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select asset" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="USDT">USDT</SelectItem>
+                  <SelectItem value="USDC">USDC</SelectItem>
+                  <SelectItem value="ETH">ETH</SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
@@ -48,15 +67,25 @@ export const SwapperForm: FC = () => {
           name="to"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>To</FormLabel>
-              <FormControl>
-                <Input placeholder="To" {...field} />
-              </FormControl>
+              <FormLabel className="text-[22px] font-bold leading-none">
+                To
+              </FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select asset" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="USDT">USDT</SelectItem>
+                  <SelectItem value="USDC">USDC</SelectItem>
+                  <SelectItem value="ETH">ETH</SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Approve</Button>
       </form>
     </Form>
   );
