@@ -10,7 +10,7 @@ export const Logo: FC = () => {
           alt="PirateBay"
         />
       </a>
-      <p className="font-PirateOne select-none text-[45px] tracking-tight text-[#352831]">
+      <p className="font-PirataOne select-none text-[45px] font-normal tracking-tight text-[#352831]">
         PirateBay
       </p>
     </div>

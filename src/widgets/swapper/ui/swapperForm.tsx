@@ -18,6 +18,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/shared/ui/select";
+import { Button } from "@/shared/ui/button";
 
 export const SwapperForm: FC = () => {
   const form = useForm<z.infer<typeof swapperFormSchema>>({
@@ -56,6 +57,9 @@ export const SwapperForm: FC = () => {
                   <SelectItem value="USDT">USDT</SelectItem>
                   <SelectItem value="USDC">USDC</SelectItem>
                   <SelectItem value="ETH">ETH</SelectItem>
+                  <Button className="h-[71px] !w-full rounded-2xl font-TTFirsNeu text-[26px] font-medium">
+                    Close
+                  </Button>
                 </SelectContent>
               </Select>
               <FormMessage />
