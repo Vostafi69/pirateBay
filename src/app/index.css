@@ -3,6 +3,36 @@
 @tailwind utilities;
 @layer base {
   :root {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+    @font-face {
+      font-family: "PirataOne";
+      src: url("/fonts/PirataOne-Regular.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "TTFirsNeue";
+      src: url("/fonts/TTFirsNeue-Bold.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: "TTFirsNeue";
+      src: url("/fonts/TTFirsNeue-Medium.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: "TTFirsNeue";
+      src: url("/fonts/TTFirsNeue-Regular.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+    }
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 42 96% 90%;
@@ -54,37 +84,5 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-}
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  @font-face {
-    font-family: "PirataOne";
-    src: url("/fonts/PirataOne-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: "TTFirsNeue";
-    src: url("/fonts/TTFirsNeue-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700;
-  }
-  @font-face {
-    font-family: "TTFirsNeue";
-    src: url("/fonts/TTFirsNeue-Medium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: "TTFirsNeue";
-    src: url("/fonts/TTFirsNeue-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 400;
   }
 }
